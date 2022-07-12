@@ -1,0 +1,51 @@
+.title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 150%;
+
+  @include vp-768 {
+    font-size: 26px;
+    line-height: 140%;
+  }
+
+  @include vp-320 {
+    font-size: 24px;
+  }
+
+  &_size_middle {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 150%;
+
+    @include vp-768 {
+      font-size: 34px;
+    }
+
+    @include vp-320 {
+      font-size: 24px;
+      line-height: 130%;
+    }
+  }
+
+  &_size_big {
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 66px;
+
+    @include vp-768 {
+      font-size: 50px;
+      line-height: 61px;
+    }
+
+    @include vp-320 {
+      font-size: 36px;
+      line-height: 125%;
+    }
+  }
+
+  &_size_small {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+  }
+}

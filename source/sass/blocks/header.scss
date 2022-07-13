@@ -1,0 +1,156 @@
+.header {
+  position: relative;
+  max-width: 1366px;
+  min-height: 650px;
+  margin: 0 auto;
+  padding: 34px 103px 35px;
+  background: url("../img/header/header-bg-desktop.jpg") center no-repeat;
+  background-color: #011C40;
+
+  @include vp-768 {
+    min-height: 638px;
+    padding: 20px 45px;
+    background-image: url("../img/header/header-bg-tablet.jpg");
+  }
+
+  @include vp-320 {
+    min-width: 320px;
+    min-height: 500px;
+    height: 500px;
+    padding: 20px 15px;
+  }
+}
+
+.header__nav-toggle {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    width: 24px;
+    height: 1.5px;
+    background-color: #F9FBFD;
+    box-shadow: 0 6px 0 0 #F9FBFD, 0 12px 0 0 #F9FBFD;
+  }
+
+  &:active {
+    background-color: #f0ebff;
+  }
+
+  @include vp-320 {
+    display: block;
+  }
+}
+
+.header__nav {
+  &_opened {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 35px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    min-height: 568px;
+    padding: 20px 15px;
+    background-color: #F9FBFD;
+
+    & .header__logo-wrapper {
+      flex-grow: 0;
+    }
+
+    & .logo {
+      fill: #011C40;
+    }
+  }
+
+  &_opened .header__nav-toggle {
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 11px;
+      right: 7px;
+      width: 17px;
+      height: 1.5px;
+      background-color: #011C40;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+  }
+
+  &_opened .header__logo-wrapper {
+    margin-bottom: 25px;
+  }
+
+  @include vp-320 {
+    &_nojs {
+      position: static;
+      display: block;
+    }
+
+    &_nojs .nav__toggle {
+      display: none;
+    }
+
+    &_closed .nav__list {
+      display: none;
+    }
+  }
+}
+
+.header__logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+
+  & svg {
+    margin-right: 10px;
+  }
+}
+
+.header__title {
+  margin: 196px 0 12px 95px;
+  color: #F9FBFD;
+
+  @include vp-768 {
+    margin-top: 210px;
+    margin-left: 0;
+  }
+
+  @include vp-320 {
+    margin-top: 126px;
+  }
+}
+
+.header__subtitle {
+  font-size: 20px;
+  margin: 0 0 0 95px;
+  color: #F9FBFD;
+
+  @include vp-768 {
+    margin-left: 0;
+  }
+
+  @include vp-320 {
+    font-size: 16px;
+  }
+}

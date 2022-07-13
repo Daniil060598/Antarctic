@@ -1,10 +1,20 @@
 .nav {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
 .nav__list {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  @include vp-320 {
+    flex-direction: column;
+  }
 }
 
 .nav__item {
@@ -13,11 +23,33 @@
     margin-right: 0;
   }
 
+  @include vp-768 {
+    margin-right: 23px;
+  }
+
+  @include vp-320 {
+    margin-right: 0;
+  }
+
   & a {
     display: block;
-    padding: 10px;
+    padding: 10px 0 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
     color: #F9FBFD;
     text-decoration: none;
+
+    @include vp-768 {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    @include vp-320 {
+      padding-left: 10px;
+      font-size: 18px;
+      line-height: 22px;
+      color: #011C40;
+    }
   }
 }
-

@@ -51,6 +51,10 @@
 }
 
 .header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   &_opened {
     position: absolute;
     top: 0;

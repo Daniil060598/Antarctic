@@ -13,7 +13,7 @@
 <body>
   <!-- <div class="wrapper"> -->
   <header class="header">
-    <nav class="header__nav nav header__nav_closed header__nav_nojs">
+    <nav class="header__nav header__nav_closed header__nav_nojs">
       <div class="header__logo-wrapper">
         <svg class="logo" width="70" height="38" role="img">
           <use xlink:href="img/sprite_auto.svg#logo"></use>
@@ -22,17 +22,17 @@
           <span class="visually-hidden">Открыть меню</span>
         </button>
       </div>
-      <ul class="nav__list">
-        <li class="nav__item">
+      <ul class="nav-list">
+        <li class="nav-list__item">
           <a href="#">Преимущества</a>
         </li>
-        <li class="nav__item">
+        <li class="nav-list__item">
           <a href="#">Направления</a>
         </li>
-        <li class="nav__item">
+        <li class="nav-list__item">
           <a href="#">Ближайшие круизы</a>
         </li>
-        <li class="nav__item">
+        <li class="nav-list__item">
           <a href="#">Контакты</a>
         </li>
       </ul>
@@ -40,10 +40,68 @@
     <h1 class="header__title title title_size_big">Круизы в Антарктику</h1>
     <p class="header__subtitle">Волшебный мир айсбергов и пингвинов</p>
   </header>
-  <main>
+  <main class="main">
+    <section class="about-cruise">
+      <div class="about-cruise__wrapper">
+        <h2 class="about-cruise__title title">Путешествие на край Земли</h2>
+        <p class="about-cruise__text text">Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром
+          Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько
+          видов пингвинов, китов, морских котиков и многое другое.</p>
+      </div>
+        <picture>
+          <source type="image/webp" srcset="img/about/rectangle-desktop.webp 1x, img/about/rectangle-desktop@2x.webp 2x">
+          <img class="about-cruise__img" width="560" height="301" src="img/about/rectangle-desktop.jpg" srcset="img/about/rectangle-desktop@2x.jpg 2x" alt="Пингвины">
+        </picture>
+    </section>
   </main>
   <footer class="footer">
-
+    <h2 class="visually-hidden">Подвал</h2>
+    <svg class="footer__logo logo" width="70" height="38" role="img">
+      <use xlink:href="img/sprite_auto.svg#logo"></use>
+    </svg>
+    <ul class="footer__nav nav-list">
+      <li class="footer__nav-item nav-list__item">
+        <a href="#">Преимущества</a>
+      </li>
+      <li class="footer__nav-item nav-list__item">
+        <a href="#">Направления</a>
+      </li>
+      <li class="footer__nav-item nav-list__item">
+        <a href="#">Ближайшие круизы</a>
+      </li>
+      <li class="footer__nav-item nav-list__item">
+        <a href="#">Контакты</a>
+      </li>
+    </ul>
+    <div class="footer__social social">
+      <h3 class="visually-hidden">Социальные сети</h3>
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <svg class="social__link-icon social__link-icon_facebook" width="11" height="20" role="img">
+              <use xlink:href="img/sprite_auto.svg#facebook"></use>
+            </svg>
+            <span class="visually-hidden">Мы в Фейсбуке</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <svg class="social__link-icon social__link-icon_instagram" width="20" height="20" role="img">
+              <use xlink:href="img/sprite_auto.svg#Instagram"></use>
+            </svg>
+            <span class="visually-hidden">Мы в Инстаграме</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <svg class="social__link-icon social__link-icon_twitter" width="20" height="16" role="img">
+              <use xlink:href="img/sprite_auto.svg#twitter"></use>
+            </svg>
+            <span class="visually-hidden">Мы в Твиттере</span>
+          </a>
+        </li>
+      </ul>
+    </div>
   </footer>
   <!-- </div> -->
 

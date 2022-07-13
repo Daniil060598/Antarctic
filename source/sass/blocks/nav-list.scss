@@ -1,10 +1,4 @@
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav__list {
+.nav-list {
   display: flex;
   flex-wrap: wrap;
   row-gap: 10px;
@@ -17,7 +11,7 @@
   }
 }
 
-.nav__item {
+.nav-list__item {
   margin-right: 33px;
   &:last-child {
     margin-right: 0;
@@ -46,7 +40,6 @@
     }
 
     @include vp-320 {
-      padding-left: 10px;
       font-size: 18px;
       line-height: 22px;
       color: #011C40;

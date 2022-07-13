@@ -1,0 +1,14 @@
+.main {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 103px;
+
+  @include vp-768 {
+    padding: 0 45px;
+  }
+
+  @include vp-320 {
+    padding: 0 15px;
+    min-width: 320px;
+  }
+}

@@ -13,6 +13,21 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
 
+  const navMain = document.querySelector('.header__nav');
+  const navToggle = document.querySelector(".header__nav-toggle");
+
+  navMain.classList.remove("header__nav_nojs");
+
+  navToggle.addEventListener("click", function () {
+    if (navMain.classList.contains("header__nav_closed")) {
+      navMain.classList.remove("header__nav_closed");
+      navMain.classList.add("header__nav_opened");
+    } else {
+      navMain.classList.add("header__nav_closed");
+      navMain.classList.remove("header__nav_opened");
+    }
+  });
+
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
@@ -20,20 +35,6 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-const navMain = document.querySelector('.header__nav');
-const navToggle = document.querySelector(".header__nav-toggle");
-
-navMain.classList.remove("header__nav_nojs");
-
-navToggle.addEventListener("click", function () {
-  if (navMain.classList.contains("header__nav_closed")) {
-    navMain.classList.remove("header__nav_closed");
-    navMain.classList.add("header__nav_opened");
-  } else {
-    navMain.classList.add("header__nav_closed");
-    navMain.classList.remove("header__nav_opened");
-  }
-});
 
 // ---------------------------------
 

@@ -2,16 +2,33 @@
   max-width: 1366px;
   padding: 120px 118px;
   margin: 0 auto;
+
+  @include vp-1365{
+    padding: 90px 60px 100px;
+  }
+
+  @include vp-767 {
+    padding: 58px 25px 65px;
+  }
 }
 
 .cruises__title {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
+
+  @include vp-1365{
+    margin-bottom: 50px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 30px;
+  }
 }
 
 .cruises__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   row-gap: 30px;
   column-gap: 30px;
   margin: 0;
@@ -21,34 +38,73 @@
 
 .cruises__item {
   position: relative;
-  min-height: 386px;
-  min-width: 260px;
   background: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011C40 100%);
   cursor: pointer;
   color: #F9FBFD;
   overflow: hidden;
 
-  &:hover .cruises__item-desc {
+  &:hover .cruises__item-desc,
+  &:focus-within .cruises__item-desc {
     background-color: #011C40;
     top: 0;
     transition: 0.2s;
+    padding: 26px 15px 35px 25px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      background-color: #011C40;
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb  {
+      background-color: #F9FBFD;
+      border: 2px solid #011C40;
+      border-radius: 25px;
+    }
+
+  }
+
+  & img {
+    object-fit: cover;
+    height: 386px;
+  }
+
+  @include vp-1365{
+    & img {
+      width: 309px;
+    }
+  }
+
+  @include vp-767 {
+    & img {
+      width: 270px;
+    }
   }
 }
 
-.cruises__item-img {
-  object-fit: cover;
-}
-
 .cruises__item-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: absolute;
-  top: 290px;
-  padding: 28px 25px;
+  top: 310px;
+  padding: 28px 30px 28px;
+  width: 100%;
+  height: 100%;
 
   & h3 {
     font-weight: 500;
     font-size: 18px;
     line-height: 150%;
     margin: 0 0 13px;
+  }
+
+  & dl {
+    margin-bottom: 26px;
+
+    :last-child {
+      margin-bottom: 0;
+    }
   }
 
   & dl dt,
@@ -61,6 +117,14 @@
   & dl dd {
     font-weight: 400;
     color: #D8D8D9;
-    margin: 0 0 15px;
+    margin: 0 0 12px;
+  }
+
+  @include vp-1365 {
+    padding: 28px 35px 25px;
+  }
+
+  @include vp-767 {
+    padding: 28px 25px 35px;
   }
 }

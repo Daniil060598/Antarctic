@@ -10,4 +10,8 @@
   background-color: #F9FBFD;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
 }

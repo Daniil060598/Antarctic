@@ -53,6 +53,7 @@
 .contacts__address,
 .contacts__phone {
   display: flex;
+
   &::before {
     display: block;
     flex-shrink: 0;

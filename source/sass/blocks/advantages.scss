@@ -2,6 +2,7 @@
   background: url("../img/advantages/advantages-bg-desktop.jpg") center no-repeat;
   background-size: cover;
   min-height: 562px;
+  background-color: #E3ECF6;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/advantages/advantages-bg-desktop@2x.jpg");
@@ -51,6 +52,7 @@
   position: relative;
   padding: 80px 30px 45px;
   background-color: #F9FBFD;
+
   &:last-child {
     margin-right: 0;
   }

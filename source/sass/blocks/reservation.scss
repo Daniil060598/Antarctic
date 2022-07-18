@@ -3,6 +3,7 @@
   padding: 50px 163px;
   min-height: 555px;
   background: url("../img/reservation/reservation-bg-desktop.jpg") center no-repeat;
+  background-color: #E3ECF6;
   background-size: cover;
 
   @media (min-resolution: 2dppx) {
@@ -88,6 +89,10 @@
     width: 100%;
     font-size: 14px;
     line-height: 150%;
+
+    &:hover {
+      opacity: 0.8;
+    }
 
     &::placeholder {
       color: #011C4070;

@@ -21,6 +21,10 @@
 
 .social__link {
   display: block;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .social__link-icon {

@@ -1,10 +1,12 @@
 .footer {
   display: flex;
+  width: 100%;
   max-width: 1366px;
   margin: 0 auto;
-  padding: 50px 103px;
+  padding: 46px 103px;
   background: #011C40;
   align-items: center;
+
   @include vp-1365 {
     padding: 45px 45px;
   }
@@ -19,25 +21,28 @@
 
 .footer__logo {
   margin-right: 40px;
+
   @include vp-1365 {
     margin-right: 25px;
   }
 
   @include vp-767 {
     margin-right: 0;
-    margin-bottom: 17px;
+    margin-bottom: 9px;
   }
 }
 
 .footer__nav {
   margin-right: auto;
+  color: #F9FBFD;
+
   @include vp-767 {
     gap: 0;
     margin-bottom: 15px;
   }
 }
 
-.footer__nav-item a{
+.footer__nav-item a {
   @include vp-1365 {
     font-size: 12px;
     line-height: 15px;
@@ -54,5 +59,3 @@
 .footer__social {
   padding-top: 5px;
 }
-
-

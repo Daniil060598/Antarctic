@@ -1,5 +1,5 @@
-import { iosVhFix } from './utils/ios-vh-fix';
-import { initModals } from './modules/modals/init-modals';
+import {iosVhFix} from './utils/ios-vh-fix';
+import {initModals} from './modules/modals/init-modals';
 
 // ---------------------------------
 
@@ -14,17 +14,17 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   const navMain = document.querySelector('.header__nav');
-  const navToggle = document.querySelector(".header__nav-toggle");
+  const navToggle = document.querySelector('.header__nav-toggle');
 
-  navMain.classList.remove("header__nav_nojs");
+  navMain.classList.remove('header__nav_nojs');
 
-  navToggle.addEventListener("click", function () {
-    if (navMain.classList.contains("header__nav_closed")) {
-      navMain.classList.remove("header__nav_closed");
-      navMain.classList.add("header__nav_opened");
+  navToggle.addEventListener('click', function () {
+    if (navMain.classList.contains('header__nav_closed')) {
+      navMain.classList.remove('header__nav_closed');
+      navMain.classList.add('header__nav_opened');
     } else {
-      navMain.classList.add("header__nav_closed");
-      navMain.classList.remove("header__nav_opened");
+      navMain.classList.add('header__nav_closed');
+      navMain.classList.remove('header__nav_opened');
     }
   });
 
@@ -35,13 +35,13 @@ window.addEventListener('DOMContentLoaded', () => {
         // Уровень масштабирования. Допустимые значения:
         // от 0 (весь мир) до 19.
         zoom: 16
-        }, {
-          searchControlProvider: 'yandex#search'
-        }),
+    }, {
+        searchControlProvider: 'yandex#search'
+    }),
 
       // Создаём макет содержимого.
       MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+          '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
       ),
 
       myPlacemark = new ymaps.Placemark(myMap.getCenter(), {

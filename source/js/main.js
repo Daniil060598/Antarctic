@@ -28,6 +28,42 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  ymaps.ready(function () {
+    let myMap = new ymaps.Map('map', {
+        // Координаты центра карты.
+        center: [59.938635, 30.323118],
+        // Уровень масштабирования. Допустимые значения:
+        // от 0 (весь мир) до 19.
+        zoom: 16
+        }, {
+          searchControlProvider: 'yandex#search'
+        }),
+
+      // Создаём макет содержимого.
+      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+      ),
+
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+        hintContent: 'Собственный значок метки',
+        balloonContent: 'Это красивая метка'
+      }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#image',
+        // Своё изображение иконки метки.
+        iconImageHref: '../img/svg/map-marker.svg',
+        // Размеры метки.
+        iconImageSize: [18, 22],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-5, -38],
+        iconContentLayout: MyIconContentLayout
+      });
+
+    myMap.geoObjects.add(myPlacemark);
+  });
+
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {

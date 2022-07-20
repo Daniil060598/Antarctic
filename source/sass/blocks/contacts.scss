@@ -18,7 +18,7 @@
 
 .contacts__map {
   height: 306px;
-  background-color: #011C40;
+  background-color: #011c40;
 
   @include vp-1365 {
     height: 335px;
@@ -47,7 +47,7 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 150%;
-  margin: 0 0 27px;
+  margin: 0 0 32px;
 }
 
 .contacts__address,
@@ -69,7 +69,6 @@
 
   &::before {
     content: "";
-    margin-top: 5px;
     height: 22px;
     background: url("../img/svg/map-marker.svg") no-repeat;
   }
@@ -80,6 +79,7 @@
 
   &::before {
     content: "";
+    margin-top: 2px;
     height: 18px;
     background: url("../img/svg/phone.svg") no-repeat;
   }

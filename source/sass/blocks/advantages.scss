@@ -1,8 +1,9 @@
 .advantages {
-  background: url("../img/advantages/advantages-bg-desktop.jpg") center no-repeat;
+  background: url("../img/advantages/advantages-bg-desktop.jpg") center
+    no-repeat;
   background-size: cover;
   min-height: 562px;
-  background-color: #E3ECF6;
+  background-color: #e3ecf6;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/advantages/advantages-bg-desktop@2x.jpg");
@@ -51,7 +52,7 @@
 .advantages__item {
   position: relative;
   padding: 80px 30px 45px;
-  background-color: #F9FBFD;
+  background-color: #f9fbfd;
 
   &:last-child {
     margin-right: 0;
@@ -88,20 +89,6 @@
     background-image: url("../img/svg/advantages-icon-3.svg");
   }
 
-  & h3 {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 150%;
-    margin: 0 0 10px;
-  }
-
-  & p {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 140%;
-    margin: 0;
-  }
-
   @include vp-1365 {
     padding: 70px 12px 20px 20px;
   }
@@ -109,4 +96,18 @@
   @include vp-767 {
     min-height: 250px;
   }
+}
+
+.advantages__item h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  margin: 0 0 10px;
+}
+
+.advantages__item p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  margin: 0;
 }

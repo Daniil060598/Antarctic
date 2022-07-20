@@ -1,0 +1,15 @@
+.page {
+  font-family: "Montserrat", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $fz-default;
+  line-height: 24px;
+}
+
+.page__body {
+  min-height: 100%;
+  background-color: $color-default-white;
+  color: #011c40;
+  scroll-behavior: smooth;
+  word-wrap: break-word;
+}

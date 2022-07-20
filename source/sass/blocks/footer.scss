@@ -4,7 +4,7 @@
   max-width: 1366px;
   margin: 0 auto;
   padding: 46px 103px;
-  background: #011C40;
+  background: #011c40;
   align-items: center;
 
   @include vp-1365 {
@@ -20,6 +20,7 @@
 }
 
 .footer__logo {
+  margin-top: 3px;
   margin-right: 40px;
 
   @include vp-1365 {
@@ -34,7 +35,7 @@
 
 .footer__nav {
   margin-right: auto;
-  color: #F9FBFD;
+  color: #f9fbfd;
 
   @include vp-767 {
     gap: 0;
@@ -52,7 +53,7 @@
     padding: 8px 0;
     font-size: 12px;
     line-height: 15px;
-    color: #F9FBFD;
+    color: #f9fbfd;
   }
 }
 

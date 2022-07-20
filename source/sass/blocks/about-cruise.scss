@@ -25,6 +25,10 @@
   }
 }
 
+.about-cruise picture{
+
+}
+
 .about-cruise__title {
   margin: 56px 0 24px;
 
@@ -43,9 +47,6 @@
 
 .about-cruise__img {
   object-fit: cover;
-  min-width: 560px;
-  min-height: 301px;
-
   @include vp-1365 {
     min-width: 324px;
     min-height: 264px;

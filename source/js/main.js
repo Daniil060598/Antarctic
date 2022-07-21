@@ -7,6 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const navMain = document.querySelector('.header__nav');
   const navToggle = document.querySelector('.header__nav-toggle');
+  const body = document.querySelector('.page__body');
 
   navMain.classList.remove('header__nav_nojs');
 
@@ -14,9 +15,11 @@ window.addEventListener('DOMContentLoaded', () => {
     if (navMain.classList.contains('header__nav_closed')) {
       navMain.classList.remove('header__nav_closed');
       navMain.classList.add('header__nav_opened');
+      body.classList.add('scroll-lock');
     } else {
       navMain.classList.add('header__nav_closed');
       navMain.classList.remove('header__nav_opened');
+      body.classList.remove('scroll-lock');
     }
   });
 

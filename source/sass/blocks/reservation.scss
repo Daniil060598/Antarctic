@@ -1,7 +1,4 @@
 .reservation {
-  display: flex;
-  padding: 50px 163px;
-  min-height: 555px;
   background: url("../img/reservation/reservation-bg-desktop.jpg") center
     no-repeat;
   background-color: #e3ecf6;
@@ -10,6 +7,14 @@
   @media (min-resolution: 2dppx) {
     background-image: url("../img/reservation/reservation-bg-desktop@2x.jpg");
   }
+}
+
+.reservation__wrapper {
+  display: flex;
+  max-width: 1366px;
+  min-height: 555px;
+  margin: 0 auto;
+  padding: 50px 163px;
 
   @include vp-1365 {
     flex-direction: column;
@@ -20,7 +25,7 @@
 
   @include vp-767 {
     min-height: 760px;
-    padding: 58px 15px 65px 15px;
+    padding: 58px 15px 62px 15px;
   }
 }
 
@@ -45,23 +50,27 @@
   }
 }
 
-.reservation__text {
-  padding-right: 120px;
-  margin: 0 0 53px;
-
-  @include vp-767 {
-    text-align: center;
-    font-size: 16px;
-    line-height: 140%;
-    margin: 0 0 35px;
-    padding-right: 0;
-  }
-}
-
 .reservation__text,
 .reservation__form-text {
   font-size: 18px;
   line-height: 150%;
+}
+
+.reservation__text {
+  max-width: 345px;
+  margin: 0 0 53px;
+
+  @include vp-1365 {
+    margin-left: 37px;
+    text-align: center;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 140%;
+    margin: 0 0 33px;
+    padding-right: 0;
+  }
 }
 
 .reservation__form {
@@ -70,7 +79,7 @@
   background-color: #011c40;
 
   @include vp-767 {
-    padding: 30px 30px 40px;
+    padding: 35px 30px 40px;
   }
 }
 
@@ -79,7 +88,12 @@
   color: #f9fbfd;
 
   @include vp-1365 {
+    text-align: left;
+  }
+
+  @include vp-767 {
     text-align: center;
+    line-height: 140%;
   }
 }
 
@@ -107,6 +121,10 @@
   display: flex;
   align-items: center;
   margin-bottom: 30px;
+
+  @include vp-767 {
+    margin-bottom: 25px;
+  }
 }
 
 .reservation__control-mark {
@@ -116,12 +134,20 @@
   margin-right: 5px;
   background-color: #f9fbfd;
   flex-shrink: 0;
+
+  @include vp-767 {
+    margin-right: 8px;
+  }
 }
 
 .reservation__control-label {
-  font-size: 9px;
+  font-size: 10px;
   line-height: 130%;
   color: #f9fbfd;
+
+  @include vp-767 {
+    line-height: 120%;
+  }
 }
 
 .reservation__control-input:checked + .reservation__control-mark {

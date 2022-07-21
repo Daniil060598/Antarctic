@@ -1,6 +1,6 @@
 .cruises {
   max-width: 1366px;
-  padding: 120px 118px;
+  padding: 110px 118px 120px;
   margin: 0 auto;
 
   @include vp-1365 {
@@ -14,7 +14,7 @@
 
 .cruises__title {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 49px;
 
   @include vp-1365 {
     margin-bottom: 50px;

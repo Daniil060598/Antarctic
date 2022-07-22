@@ -92,7 +92,7 @@ const syncServer = () => {
     ui: false,
   });
 
-  gulp.watch('source/**.html', gulp.series(copy, refresh));
+  gulp.watch('source/**/*.html', gulp.series(copy, refresh));
   gulp.watch('source/sass/**/*.{scss,sass}', gulp.series(css));
   gulp.watch('source/js/**/*.{js,json}', gulp.series(js, refresh));
   gulp.watch('source/data/**/*.{js,json}', gulp.series(copy, refresh));

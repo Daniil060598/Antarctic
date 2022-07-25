@@ -22,7 +22,8 @@
 .social__link {
   display: block;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.5;
   }
 }

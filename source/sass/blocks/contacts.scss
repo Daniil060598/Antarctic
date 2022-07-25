@@ -93,4 +93,9 @@
     height: 18px;
     background: url("../img/svg/phone.svg") no-repeat;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
 }

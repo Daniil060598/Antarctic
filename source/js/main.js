@@ -8,19 +8,41 @@ window.addEventListener('DOMContentLoaded', () => {
   const navMain = document.querySelector('.header__nav');
   const navToggle = document.querySelector('.header__nav-toggle');
   const body = document.querySelector('.page__body');
+  const form = document.querySelector('.reservation__form');
+  const navList = document.querySelector('.header__nav-list');
 
   navMain.classList.remove('header__nav_nojs');
 
+  const closeMenu = () => {
+    navMain.classList.remove('header__nav_closed');
+    navMain.classList.add('header__nav_opened');
+    body.classList.add('scroll-lock');
+  };
+
+  const onListClick = (evt) => {
+    if (evt.target.nodeName === 'A') {
+      closeMenu();
+    }
+  };
+
   navToggle.addEventListener('click', () => {
     if (navMain.classList.contains('header__nav_closed')) {
-      navMain.classList.remove('header__nav_closed');
-      navMain.classList.add('header__nav_opened');
-      body.classList.add('scroll-lock');
+      closeMenu();
+      navList.addEventListener('click', onListClick);
     } else {
       navMain.classList.add('header__nav_closed');
       navMain.classList.remove('header__nav_opened');
       body.classList.remove('scroll-lock');
     }
+  });
+
+  form.addEventListener('submit', () => {
+    const inputName = document.getElementById('name');
+    const inputTel = document.getElementById('tel');
+    const inputEmail = document.getElementById('email');
+    localStorage.setItem('name', inputName.value);
+    localStorage.setItem('tel', inputTel.value);
+    localStorage.setItem('email', inputEmail.value);
   });
 
   window.ymaps.ready(() => {

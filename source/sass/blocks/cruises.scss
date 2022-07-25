@@ -42,7 +42,8 @@
   color: #f9fbfd;
   overflow: hidden;
 
-  &:hover {
+  &:hover,
+  &:focus-within {
     overflow: visible;
   }
 
@@ -51,7 +52,7 @@
     background-color: #011c40;
     top: 0;
     transition: 0.2s;
-    padding: 26px 25px 35px;
+    padding: 30px 25px 32px;
     z-index: 1;
 
     @include vp-1365 {
@@ -111,7 +112,7 @@
 }
 
 .cruises__item-characteristics {
-  margin: 0 0 26px;
+  margin: 0 0 24px;
 }
 
 .cruises__item-characteristics dt,
@@ -124,7 +125,7 @@
 .cruises__item-characteristics dd {
   font-weight: 400;
   color: #d8d8d9;
-  margin: 0 0 12px;
+  margin: 0 0 13px;
 
   &:last-child {
     margin-bottom: 0;

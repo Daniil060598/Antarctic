@@ -108,7 +108,8 @@
   font-size: 14px;
   line-height: 150%;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.8;
   }
 
@@ -150,10 +151,20 @@
   }
 }
 
-.reservation__control-input:checked + .reservation__control-mark {
-  background: #f9fbfd url("../img/svg/tick.svg") center no-repeat;
+.reservation__control-input + .reservation__control-mark {
+  cursor: pointer;
 }
 
-.reservation__control-input:focus + .reservation__control-mark {
-  outline: auto;
+.reservation__control-input {
+  &:hover + .reservation__control-mark {
+    opacity: 0.8;
+  }
+
+  &:focus + .reservation__control-mark {
+    outline: auto;
+  }
+
+  &:checked + .reservation__control-mark {
+    background: #f9fbfd url("../img/svg/tick.svg") center no-repeat;
+  }
 }

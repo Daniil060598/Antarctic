@@ -74,7 +74,7 @@ window.addEventListener('DOMContentLoaded', () => {
           // Необходимо указать данный тип макета.
           iconLayout: 'default#image',
           // Своё изображение иконки метки.
-          iconImageHref: '../img/svg/map-marker.svg',
+          iconImageHref: 'img/svg/map-marker.svg',
           // Размеры метки.
           iconImageSize: [18, 22],
           // Смещение левого верхнего угла иконки относительно

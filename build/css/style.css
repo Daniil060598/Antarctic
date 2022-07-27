@@ -661,16 +661,16 @@ video {
 }
 
 .header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   width: 100%;
+  height: 100%;
   min-width: 320px;
-  background: url("../img/header/header-bg-desktop.jpg") center bottom no-repeat;
-  background-size: cover;
-  background-color: #011c40;
-}
-
-.header__wrapper {
   max-width: 1366px;
-  min-height: 650px;
   margin: 0 auto;
   padding: 30px 103px 35px;
 }
@@ -762,12 +762,27 @@ video {
   color: #f9fbfd;
 }
 
-.header__title {
+.main-screen {
+  width: 100%;
+  min-width: 320px;
+  background: url("../img/header/header-bg-desktop.jpg") center bottom no-repeat;
+  background-size: cover;
+  background-color: #011c40;
+}
+
+.main-screen__wrapper {
+  max-width: 1366px;
+  min-height: 650px;
+  margin: 0 auto;
+  padding: 30px 103px 35px;
+}
+
+.main-screen__title {
   margin: 190px 0 12px 95px;
   color: #f9fbfd;
 }
 
-.header__subtitle {
+.main-screen__subtitle {
   font-size: 20px;
   margin: 0 0 0 95px;
   color: #f9fbfd;
@@ -806,19 +821,16 @@ video {
 }
 
 .about-cruise {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 40px;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
   max-width: 1366px;
   margin: 0 auto;
   padding: 120px 103px;
-}
-
-.about-cruise__wrapper {
-  max-width: 512px;
 }
 
 .about-cruise__title {
@@ -945,11 +957,6 @@ video {
   overflow: hidden;
 }
 
-.cruises__item:hover,
-.cruises__item:focus-within {
-  overflow: visible;
-}
-
 .cruises__item:hover .cruises__item-desc,
 .cruises__item:focus-within .cruises__item-desc {
   background-color: #011c40;
@@ -959,6 +966,20 @@ video {
   transition: 0.2s;
   padding: 30px 25px 32px;
   z-index: 1;
+  overflow-y: scroll;
+}
+
+.cruises__item:hover .cruises__item-desc::-webkit-scrollbar,
+.cruises__item:focus-within .cruises__item-desc::-webkit-scrollbar {
+  background-color: #011c40;
+  width: 10px;
+}
+
+.cruises__item:hover .cruises__item-desc::-webkit-scrollbar-thumb,
+.cruises__item:focus-within .cruises__item-desc::-webkit-scrollbar-thumb {
+  background-color: #f9fbfd;
+  border: 2px solid #011c40;
+  border-radius: 25px;
 }
 
 .cruises__item:hover .cruises__item-desc h3,
@@ -987,7 +1008,7 @@ video {
   top: 310px;
   padding: 28px 30px 28px;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
 }
 
 .cruises__item-desc h3 {
@@ -1028,6 +1049,9 @@ video {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   max-width: 1366px;
   min-height: 555px;
   margin: 0 auto;
@@ -1035,7 +1059,7 @@ video {
 }
 
 .reservation__left-column {
-  margin-right: 144px;
+  margin-right: 40px;
 }
 
 .reservation__title {
@@ -1146,8 +1170,8 @@ video {
 .contacts {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 560px auto;
-  grid-template-columns: 560px auto;
+  -ms-grid-columns: minmax(312px, 560px) minmax(auto, 500px);
+  grid-template-columns: minmax(312px, 560px) minmax(auto, 500px);
   -webkit-column-gap: 100px;
   -moz-column-gap: 100px;
   column-gap: 100px;
@@ -1223,7 +1247,7 @@ video {
   }
 } */
 
-@media (max-width: 1365px) {
+@media (max-width: 1023px) {
   .title {
     font-size: 26px;
     line-height: 140%;
@@ -1271,17 +1295,21 @@ video {
     height: 20px;
   }
 
-  .header__wrapper {
+  .header {
+    padding: 23px 45px;
+  }
+
+  .main-screen__wrapper {
     min-height: 638px;
     padding: 23px 45px;
   }
 
-  .header__title {
+  .main-screen__title {
     margin-top: 210px;
     margin-left: 0;
   }
 
-  .header__subtitle {
+  .main-screen__subtitle {
     margin-left: 0;
     font-size: 18px;
     line-height: 22px;
@@ -1302,11 +1330,10 @@ video {
   }
 
   .about-cruise {
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
     padding: 100px 45px 93px;
-  }
-
-  .about-cruise__wrapper {
-    margin-right: 30px;
   }
 
   .about-cruise__title {
@@ -1315,7 +1342,7 @@ video {
 
   .about-cruise__img {
     min-width: 324px;
-    min-height: 264px;
+    max-height: 264px;
   }
 
   .advantages__wrapper {
@@ -1473,19 +1500,22 @@ video {
     height: 22px;
   }
 
-  .header__wrapper {
-    min-height: 500px;
+  .header {
     padding: 20px 15px;
   }
 
+  .header_nojs {
+    position: static;
+  }
+
   .header__nav_opened {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     background: rgba(0, 43, 102, 0.5);
-    z-index: 100;
+    z-index: 10;
   }
 
   .header__nav_opened .header__nav-wrapper {
@@ -1507,6 +1537,7 @@ video {
     padding: 20px 4px 20px 15px;
     background-color: #f9fbfd;
     overflow-y: scroll;
+    z-index: 200;
   }
 
   .header__nav_opened .header__logo-wrapper {
@@ -1537,13 +1568,17 @@ video {
     display: block;
   }
 
+  .header__nav_nojs .header__logo {
+    fill: #011c40;
+  }
+
   .header__nav_nojs .header__nav-toggle {
     display: none;
   }
 
   .header__nav_nojs .header__nav-list {
     display: block;
-    color: #f9fbfd;
+    color: #011c40;
   }
 
   .header__nav-toggle {
@@ -1558,11 +1593,16 @@ video {
     display: none;
   }
 
-  .header__title {
+  .main-screen__wrapper {
+    min-height: 500px;
+    padding: 20px 15px;
+  }
+
+  .main-screen__title {
     margin-top: 126px;
   }
 
-  .header__subtitle {
+  .main-screen__subtitle {
     font-size: 16px;
   }
 
@@ -1599,10 +1639,8 @@ video {
   }
 
   .about-cruise {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
     padding: 65px 15px;
   }
 
@@ -1616,7 +1654,7 @@ video {
 
   .about-cruise__img {
     min-width: 290px;
-    min-height: 186px;
+    max-height: 100%;
   }
 
   .advantages__wrapper {
@@ -1724,7 +1762,7 @@ video {
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
-  .header {
+  .main-screen {
     background-image: url("../img/header/header-bg-desktop@2x.jpg");
   }
 

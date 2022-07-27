@@ -14,7 +14,7 @@
     margin-right: 0;
   }
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin-right: 23px;
   }
 }
@@ -29,7 +29,7 @@
 }
 
 .social__link-icon {
-  @include vp-1365 {
+  @include vp-1023 {
     &_facebook {
       width: 9px;
       height: 16px;

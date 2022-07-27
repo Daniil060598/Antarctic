@@ -15,7 +15,7 @@
   margin: 0 auto;
   padding: 110px 103px 98px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     min-height: 588px;
     padding: 92px 45px 100px;
   }
@@ -42,7 +42,7 @@
   margin: 0;
   padding: 0;
 
-  @include vp-1365 {
+  @include vp-1023 {
     gap: 30px;
   }
 
@@ -69,7 +69,7 @@
     height: 30px;
     background: center no-repeat;
 
-    @include vp-1365 {
+    @include vp-1023 {
       top: 23px;
       left: 20px;
     }
@@ -82,7 +82,7 @@
   &_icon_ship::before {
     background: url("../img/svg/advantages-icon-1.svg") left no-repeat;
 
-    @include vp-1365 {
+    @include vp-1023 {
       background-size: 21px 26px;
     }
   }
@@ -90,7 +90,7 @@
   &_icon_mark::before {
     background-image: url("../img/svg/advantages-icon-2.svg");
 
-    @include vp-1365 {
+    @include vp-1023 {
       background-size: 33px 19px;
       background-position: left;
     }
@@ -99,13 +99,13 @@
   &_icon_boat::before {
     background-image: url("../img/svg/advantages-icon-3.svg");
 
-    @include vp-1365 {
+    @include vp-1023 {
       background-size: 38px 13px;
       background-position: left;
     }
   }
 
-  @include vp-1365 {
+  @include vp-1023 {
     padding: 70px 12px 20px 20px;
   }
 
@@ -121,7 +121,7 @@
   line-height: 150%;
   margin: 0 0 10px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     line-height: 140%;
     margin: 0 0 8px;
   }
@@ -137,7 +137,7 @@
   line-height: 140%;
   margin: 0;
 
-  @include vp-1365 {
+  @include vp-1023 {
     line-height: 144%;
   }
 }

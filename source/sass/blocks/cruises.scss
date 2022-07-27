@@ -3,7 +3,7 @@
   padding: 110px 118px 120px;
   margin: 0 auto;
 
-  @include vp-1365 {
+  @include vp-1023 {
     padding: 91px 60px 101px;
   }
 
@@ -16,7 +16,7 @@
   text-align: center;
   margin-bottom: 49px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin-bottom: 50px;
   }
 
@@ -42,11 +42,6 @@
   color: #f9fbfd;
   overflow: hidden;
 
-  &:hover,
-  &:focus-within {
-    overflow: visible;
-  }
-
   &:hover .cruises__item-desc,
   &:focus-within .cruises__item-desc {
     background-color: #011c40;
@@ -54,8 +49,20 @@
     transition: 0.2s;
     padding: 30px 25px 32px;
     z-index: 1;
+    overflow-y: scroll;
 
-    @include vp-1365 {
+    &::-webkit-scrollbar {
+      background-color: #011c40;
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #f9fbfd;
+      border: 2px solid #011c40;
+      border-radius: 25px;
+    }
+
+    @include vp-1023 {
       padding: 30px 35px 35px;
     }
 
@@ -74,7 +81,7 @@
   object-fit: cover;
   height: 386px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     width: 309px;
   }
 
@@ -91,9 +98,9 @@
   top: 310px;
   padding: 28px 30px 28px;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
 
-  @include vp-1365 {
+  @include vp-1023 {
     top: 305px;
     padding: 28px 35px 25px;
   }

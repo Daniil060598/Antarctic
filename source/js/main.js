@@ -4,19 +4,26 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
-
+  const header = document.querySelector('.header');
   const navMain = document.querySelector('.header__nav');
   const navToggle = document.querySelector('.header__nav-toggle');
   const body = document.querySelector('.page__body');
   const form = document.querySelector('.reservation__form');
   const navList = document.querySelector('.header__nav-list');
 
+  header.classList.remove('header_nojs');
   navMain.classList.remove('header__nav_nojs');
 
-  const closeMenu = () => {
+  const openMenu = () => {
     navMain.classList.remove('header__nav_closed');
     navMain.classList.add('header__nav_opened');
     body.classList.add('scroll-lock');
+  };
+
+  const closeMenu = () => {
+    navMain.classList.add('header__nav_closed');
+    navMain.classList.remove('header__nav_opened');
+    body.classList.remove('scroll-lock');
   };
 
   const onListClick = (evt) => {
@@ -25,14 +32,18 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  navMain.addEventListener('click', (evt) => {
+    if (!evt.target.closest('.header__nav-wrapper')) {
+      closeMenu();
+    }
+  });
+
   navToggle.addEventListener('click', () => {
     if (navMain.classList.contains('header__nav_closed')) {
-      closeMenu();
+      openMenu();
       navList.addEventListener('click', onListClick);
     } else {
-      navMain.classList.add('header__nav_closed');
-      navMain.classList.remove('header__nav_opened');
-      body.classList.remove('scroll-lock');
+      closeMenu();
     }
   });
 

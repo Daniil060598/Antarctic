@@ -18,7 +18,7 @@
     margin-right: 0;
   }
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin-right: 23px;
   }
 
@@ -37,7 +37,7 @@
   text-decoration: none;
   user-select: none;
 
-  @include vp-1365 {
+  @include vp-1023 {
     font-size: 14px;
     line-height: 17px;
   }

@@ -11,12 +11,13 @@
 
 .reservation__wrapper {
   display: flex;
+  justify-content: space-between;
   max-width: 1366px;
   min-height: 555px;
   margin: 0 auto;
   padding: 50px 163px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     flex-direction: column;
     align-items: center;
     min-height: 805px;
@@ -30,9 +31,9 @@
 }
 
 .reservation__left-column {
-  margin-right: 144px;
+  margin-right: 40px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin-right: 0;
   }
 }
@@ -40,7 +41,7 @@
 .reservation__title {
   margin: 162px 0 8px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin: 0 0 5px;
     text-align: center;
   }
@@ -60,7 +61,7 @@
   max-width: 345px;
   margin: 0 0 53px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin-left: 37px;
     text-align: center;
   }
@@ -87,7 +88,7 @@
   margin: 0 0 28px;
   color: #f9fbfd;
 
-  @include vp-1365 {
+  @include vp-1023 {
     text-align: left;
   }
 

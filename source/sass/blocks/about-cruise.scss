@@ -1,27 +1,23 @@
 .about-cruise {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
   max-width: 1366px;
   margin: 0 auto;
   padding: 120px 103px;
 
-  @include vp-1365 {
+  @include vp-1023 {
+    column-gap: 30px;
     padding: 100px 45px 93px;
   }
 
   @include vp-767 {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     padding: 65px 15px;
   }
 }
 
 .about-cruise__wrapper {
-  max-width: 512px;
-
-  @include vp-1365 {
-    margin-right: 30px;
-  }
-
   @include vp-767 {
     margin: 0 0 33px 0;
   }
@@ -30,7 +26,7 @@
 .about-cruise__title {
   margin: 56px 0 24px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin: -9px 0 15px;
   }
 
@@ -46,13 +42,13 @@
 .about-cruise__img {
   object-fit: cover;
 
-  @include vp-1365 {
+  @include vp-1023 {
     min-width: 324px;
-    min-height: 264px;
+    max-height: 264px;
   }
 
   @include vp-767 {
     min-width: 290px;
-    min-height: 186px;
+    max-height: 100%;
   }
 }

@@ -1,12 +1,12 @@
 .contacts {
   display: grid;
-  grid-template-columns: 560px auto;
+  grid-template-columns: minmax(312px, 560px) minmax(auto, 500px);
   column-gap: 100px;
   max-width: 1366px;
   margin: 0 auto;
   padding: 120px 103px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     grid-template-columns: 1fr 1fr;
     column-gap: 30px;
     padding: 100px 45px;
@@ -22,7 +22,7 @@
   height: 306px;
   background: url("../img/map.jpg") center no-repeat;
 
-  @include vp-1365 {
+  @include vp-1023 {
     height: 335px;
   }
 
@@ -35,7 +35,7 @@
 .contacts__right-column {
   padding-top: 74px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     padding-top: 66px;
   }
 
@@ -51,7 +51,7 @@
   line-height: 150%;
   margin: 0 0 32px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin: 0 0 27px;
   }
 }
@@ -78,7 +78,7 @@
     height: 22px;
     background: url("../img/svg/map-marker.svg") no-repeat;
 
-    @include vp-1365 {
+    @include vp-1023 {
       margin-top: 5px;
     }
   }

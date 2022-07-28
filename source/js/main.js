@@ -65,6 +65,7 @@ window.addEventListener('DOMContentLoaded', () => {
           // Уровень масштабирования. Допустимые значения:
           // от 0 (весь мир) до 19.
           zoom: 16,
+          controls: ['searchControl']
         },
         {
           searchControlProvider: 'yandex#search',

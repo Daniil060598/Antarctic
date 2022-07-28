@@ -42,12 +42,16 @@
   color: #f9fbfd;
   overflow: hidden;
 
+  &:focus-within {
+    overflow: visible;
+  }
+
   &:hover .cruises__item-desc,
   &:focus-within .cruises__item-desc {
     background-color: #011c40;
     top: 0;
     transition: 0.2s;
-    padding: 30px 25px 32px;
+    padding: 30px 15px 32px 25px;
     z-index: 1;
     overflow-y: scroll;
 
@@ -63,11 +67,11 @@
     }
 
     @include vp-1023 {
-      padding: 30px 35px 35px;
+      padding: 30px 25px 35px 35px;
     }
 
     @include vp-767 {
-      padding: 30px 25px 35px;
+      padding: 30px 15px 35px 25px;
     }
   }
 

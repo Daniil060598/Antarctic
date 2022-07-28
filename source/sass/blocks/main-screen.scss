@@ -28,16 +28,16 @@
 }
 
 .main-screen__title {
-  margin: 190px 0 12px 95px;
+  margin: 240px 0 12px 95px;
   color: #f9fbfd;
 
   @include vp-1023 {
-    margin-top: 210px;
+    margin-top: 245px;
     margin-left: 0;
   }
 
   @include vp-767 {
-    margin-top: 126px;
+    margin-top: 155px;
   }
 }
 

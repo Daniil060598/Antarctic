@@ -25,6 +25,7 @@
   }
 
   @include vp-767 {
+    justify-content: flex-start;
     min-height: 760px;
     padding: 58px 15px 62px 15px;
   }

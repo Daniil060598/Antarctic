@@ -1,22 +1,31 @@
 .social__list {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 20px);
+  column-gap: 26px;
+  row-gap: 15px;
+  min-width: 107px;
+  max-width: 360px;
   list-style-type: none;
   padding: 0;
   margin: 0;
+
+  @include vp-1023 {
+    grid-template-columns: repeat(auto-fit, 16px);
+    min-width: 87px;
+    column-gap: 23px;
+  }
+
+  @include vp-767 {
+    column-gap: 21px;
+  }
 }
 
 .social__item {
-  margin-right: 28px;
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  @include vp-1023 {
-    margin-right: 23px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 20px;
+  min-height: 20px;
 }
 
 .social__link {

@@ -26,13 +26,21 @@
 }
 
 .cruises__list {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 30px;
-  column-gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 260px);
+  justify-content: center;
+  gap: 30px;
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @include vp-1023 {
+    grid-template-columns: repeat(auto-fit, 309px);
+  }
+
+  @include vp-767 {
+    grid-template-columns: repeat(auto-fit, 270px);
+  }
 }
 
 .cruises__item {

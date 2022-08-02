@@ -5,7 +5,6 @@
 
 .footer__wrapper {
   display: flex;
-  align-items: center;
   width: 100%;
   max-width: 1366px;
   margin: 0 auto;
@@ -17,8 +16,12 @@
 
   @include vp-767 {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
     padding: 35px 15px;
+  }
+
+  @include vp-320 {
+    align-items: flex-start;
   }
 }
 
@@ -39,11 +42,22 @@
 
 .footer__nav {
   margin-right: auto;
+  padding-top: 5px;
   color: #f9fbfd;
+
+  @include vp-1023 {
+    padding-top: 0;
+  }
 
   @include vp-767 {
     gap: 0;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    margin-right: 0;
+    align-items: flex-end;
+  }
+
+  @include vp-320 {
+    align-items: flex-start;
   }
 }
 
@@ -62,5 +76,20 @@
 }
 
 .footer__social {
-  padding-top: 5px;
+  padding-top: 15px;
+  margin-left: 30px;
+
+  @include vp-1023 {
+    padding-top: 7px;
+    min-width: 87px;
+  }
+
+  @include vp-767 {
+    padding-top: 0;
+    margin-left: 0;
+  }
+
+  @include vp-320 {
+    transform: translateX(-6px);
+  }
 }

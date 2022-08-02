@@ -59,6 +59,7 @@
 .contacts__address,
 .contacts__phone {
   display: flex;
+  margin: 0 0 21px;
 
   &::before {
     display: block;
@@ -66,12 +67,15 @@
     width: 18px;
     margin-right: 10px;
   }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .contacts__address {
   font-weight: 400;
   font-size: 16px;
-  margin: 0 0 21px;
 
   &::before {
     content: "";

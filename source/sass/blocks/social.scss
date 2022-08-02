@@ -4,7 +4,7 @@
   column-gap: 26px;
   row-gap: 15px;
   min-width: 107px;
-  max-width: 360px;
+  max-width: 260px;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -12,12 +12,13 @@
   @include vp-1023 {
     grid-template-columns: repeat(auto-fit, 16px);
     min-width: 87px;
+    max-width: 150px;
     column-gap: 23px;
   }
 
   @include vp-767 {
-    column-gap: 21px;
     max-width: 260px;
+    column-gap: 21px;
   }
 }
 

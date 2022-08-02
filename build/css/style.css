@@ -1516,6 +1516,7 @@ video {
     -webkit-column-gap: 21px;
     -moz-column-gap: 21px;
     column-gap: 21px;
+    max-width: 260px;
   }
 
   .logo {
